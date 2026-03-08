@@ -5,12 +5,12 @@ build-backend = "hatchling.build"
 [project]
 name = "kais-sdk"
 version = "0.1.0"
-description = "kAIs SDK — connect your apps to kAIs cells via NATS"
+description = "kAIs SDK — connect your apps to kAIs cells via NATS and HTTP"
 requires-python = ">=3.10"
-dependencies = ["nats-py>=2.7.0"]
+dependencies = ["nats-py>=2.7.0", "httpx>=0.27"]
 
 [project.optional-dependencies]
-dev = ["pytest>=8.0", "pytest-asyncio>=0.23"]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "respx>=0.22"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/kais"]
